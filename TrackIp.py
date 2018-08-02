@@ -1,7 +1,9 @@
+# Made important imports.
 from bs4 import BeautifulSoup
 import requests
 information = {}
 
+# This function runs at the beginning of the IP class.
 def searchIp(x):
     global information
     url = "https://whatismyipaddress.com/ip/" + x
@@ -24,7 +26,7 @@ def searchIp(x):
         information[str(titles[i])] = str(info[i])
     return information
         
-
+# Needed class.
 class ip:
     def __init__(self, address):
         global information
